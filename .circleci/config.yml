@@ -1,0 +1,11 @@
+version: 2.1
+workflows:
+  testing:
+    jobs:
+      - runner-test
+jobs:
+  runner-test:
+    machine: true
+    resource_class: catherinepope/ec2
+    steps:
+      - run: echo "Hello, I'm EC2 on Runners!"
